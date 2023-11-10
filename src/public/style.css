@@ -1,0 +1,98 @@
+body {
+	margin: 4rem auto;
+	max-width: 750px;
+	padding: 0 1rem;
+	font-size: 1.5rem;
+	font-family: "Liberation Sans", Arial, sans-serif;
+	color: beige;
+	background-color: #111;
+	line-height: 1.4;
+	overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: FreeSans, Arial, sans-serif;
+}
+
+article h1 {
+	font-size: 2.0em;
+}
+
+pre {
+	font-family: "Liberation Sans", Arial, sans-serif;
+}
+
+code, kbd {
+	font-size: 85%;
+	background-color: lightgray;
+	color: black;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+summary {
+	cursor: pointer;
+}
+
+abbr {
+	cursor: help;
+}
+
+a:link {
+	color: lightgreen;
+}
+
+a:visited {
+	color: #c7f6c7;
+}
+
+a:hover {
+	background-color: beige;
+	color: #111;
+	text-decoration: none;
+}
+
+a:active {
+	background-color: gray;
+	color: #111;
+	text-decoration: none;
+}
+
+::selection {
+	background-color: green;
+	color: white;
+}
+
+
+form {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+input {
+    width: 50%;
+    height: auto;
+    accent-color: green;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    background-color: #F0F0F0;
+}
+
+
+textarea {
+    width: 98%;
+    height: auto;
+    accent-color: green;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    background-color: #F0F0F0;
+}
+
+button {
+    font-size: 1rem;
+    background-color: green;
+    color: white;
+    margin-bottom: 0.1rem;
+}

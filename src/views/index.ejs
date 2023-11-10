@@ -1,21 +1,50 @@
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css"/>
 </head>
 
 <body>
     <h1>Index</h1>
 
-    <form method="POST" action="/">
-	<label for="name">Name:</label><br>
-	<input type="text" id="name" name="name" placeholder="Anonymous"><br>
-	<label for="email">Email:</label><br>
-	<input type="email" id="email" name="email"><br>
-	<label for="message">Message:</label><br>
-	<textarea name="message" rows="10" cols="30"></textarea><br>
-	<br>
-	<input type="submit" value="Post message">
-    </form>
-    <hr/>
+    <center>
+	<form method="POST" action="/">
+	    <table>
+		<tr>
+		    <th align="right" style="vertical-align:top;">
+			<label for="name">Name:</label>
+		    </th>
+		    <td>
+			<input type="text" id="name" name="name" placeholder="Anonymous">
+		    </td>
+		</tr>
+		<tr>
+		    <th align="right" style="vertical-align:top;">
+			<label for="email">Email:</label>
+		    </th>
+		    <td>
+			<input type="email" id="email" name="email">
+		    </td>
+		</tr>
+		<tr>
+		    <th align="right" style="vertical-align:top;">
+			<label for="message">Message:</label>
+		    </th>
+		    <td>
+			<textarea name="message" rows="10" cols="50" required="true"></textarea>
+		    </td>
+		</tr>
+		<tr>
+		    <th align="right" style="vertical-align:top;"></th>
+		    <td>
+			<button type="submit">Post message</button>
+		    </td>
+		</tr>
+	    </table>
+	</form>
+    </center>
+	    
+	    <hr/>
 
     <% posts.forEach(post => { %>
 	<p><%= post.id %>: <%= post.username %> (<%= post.created_at.toLocaleString() %>)</p>

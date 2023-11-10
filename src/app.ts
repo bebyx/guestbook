@@ -9,6 +9,7 @@ const port = 3000;
 
 app.set('view engine', 'ejs');
 app.set('views', 'src/views');
+app.use(express.static('src/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', index);
