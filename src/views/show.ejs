@@ -1,0 +1,22 @@
+<%- include('./partials/head.ejs') %>
+
+<body>
+    <header>
+	<h1>Post #<%= post.id %></h1>
+    </header>
+
+    <nav>
+	<a href="/">Index</a>
+    </nav>
+
+    <main>
+	<article>
+	    <%- include("./partials/post.ejs", { post } ) %>
+	</article>
+    </main>
+
+    <nav>
+	<a href="/">Index</a>
+    </nav>
+    
+</body>
