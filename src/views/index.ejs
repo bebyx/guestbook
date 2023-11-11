@@ -56,7 +56,7 @@
     <main>
 	<% posts.forEach(post => { %>
 	    <article>
-		<%- include("./partials/post.ejs", { post } ) %>
+		<%- include("./partials/post.ejs", { post, user } ) %>
 	    </article>
 	<% }); %>
     </main>
