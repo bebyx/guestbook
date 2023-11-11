@@ -10,32 +10,41 @@
     </nav>
 
     <main>
-	<form method="POST" action="/login">
-	    <table>
-		<tr>
-		    <th align="right" style="vertical-align:top;">
-			<label for="name">Name:</label>
-		    </th>
-		    <td>
-			<input type="text" id="name" name="name">
-		    </td>
-		</tr>
-		<tr>
-		    <th align="right" style="vertical-align:top;">
-			<label for="email">Password:</label>
-		    </th>
-		    <td>
-			<input type="password" id="password" name="password">
-		    </td>
-		</tr>
-		<tr>
-		    <th align="right" style="vertical-align:top;"></th>
-		    <td>
-			<button type="submit">Post message</button>
-		    </td>
-		</tr>
-	    </table>
-	</form>
+	<% if (user) { %>
+	    <p>Hello <%= user.username %>! You are logged in as <%= user.role %>!</p>
+	    <p>
+		<form method="POST" action="/logout">
+		    <button type="submit">Log out</button>
+		</form>
+	    </p>
+	<% } else { %>
+	    <form method="POST" action="/login">
+		<table>
+		    <tr>
+			<th align="right" style="vertical-align:top;">
+			    <label for="name">Name:</label>
+			</th>
+			<td>
+			    <input type="text" id="name" name="name">
+			</td>
+		    </tr>
+		    <tr>
+			<th align="right" style="vertical-align:top;">
+			    <label for="email">Password:</label>
+			</th>
+			<td>
+			    <input type="password" id="password" name="password">
+			</td>
+		    </tr>
+		    <tr>
+			<th align="right" style="vertical-align:top;"></th>
+			<td>
+			    <button type="submit">Post message</button>
+			</td>
+		    </tr>
+		</table>
+	    </form>
+	<% } %>
 	
     </main>
 

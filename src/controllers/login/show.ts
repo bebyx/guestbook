@@ -1,3 +1,4 @@
 export default async (req: any, res: any) => {
-    res.render('login/show');
+    const user = req.session.user;
+    res.render('login/show', { user });
 };

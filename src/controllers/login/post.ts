@@ -15,11 +15,14 @@ export default async (req: any, res: any) => {
     try {
         const result = await pool.query(`SELECT * FROM users WHERE username=$1`, [username]);
 	const user = result.rows[0];
-	
+
+	console.log(user);
 	if (user && (await bcrypt.compare(password, user.password))) {
 	    // Set session and cookie upon successful login
-	    req.session.userId = user.id;
-	    req.session.userRole = user.role;
+	    req.session.user = {};
+	    req.session.user.id = user.id;
+	    req.session.user.username = user.username;
+	    req.session.user.role = user.role;
 	    
 	    console.log('Successfully signed in:\n', result);
 	    return res.redirect('/');

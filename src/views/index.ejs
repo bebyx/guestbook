@@ -4,7 +4,14 @@
     <header>
 	<h1>Guestbook</h1>
 
-	<% if (isAdmin) { %><p>You are logged in as Admin!</p><% } %>
+	<% if (user) { %>
+	    <p>Hello <%= user.username %>! You are logged in as <%= user.role %>!</p>
+	    <p>
+		<form method="POST" action="/logout">
+		    <button type="submit">Log out</button>
+		</form>
+	    </p>
+	<% } %>
     </header>
 
     <center>

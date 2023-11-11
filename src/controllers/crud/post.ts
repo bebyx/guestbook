@@ -9,7 +9,7 @@ export default async (req: any, res: any) => {
     if (message === "") {
 	const errorMessage = "Message should not be empty.";
 	console.error(errorMessage);
-	return res.render('error', { errorMessage });
+	return res.render('message', { message: errorMessage });
     }
 
     try {

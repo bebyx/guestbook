@@ -5,8 +5,7 @@ export default async (req: any, res: any) => {
     console.log(result);
     const posts = result.rows;
 
-    const session = req.session;
-    const isAdmin: boolean = session.userId && session.userRole === "admin";
+    const user = req.session.user;
 	
-    res.render('index', {posts, isAdmin});
+    res.render('index', {posts, user});
 };
