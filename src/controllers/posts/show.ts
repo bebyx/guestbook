@@ -8,5 +8,5 @@ export default async (req: any, res: any) => {
     const post = result.rows[0];
 
     const user = req.session.user;
-    res.render('show', { post, user });
+    res.render('posts/show', { post, user });
 };

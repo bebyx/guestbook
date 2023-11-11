@@ -7,5 +7,5 @@ export default async (req: any, res: any) => {
 
     const user = req.session.user;
 	
-    res.render('index', {posts, user});
+    res.render('posts/index', {posts, user});
 };

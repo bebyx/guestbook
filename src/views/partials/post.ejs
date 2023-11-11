@@ -3,7 +3,6 @@
 
 <% if (user && user.role === "admin") { %>
     <form method="POST" action="/<%= post.id %>?_method=DELETE"">
-	<input type="hidden" name="_method" value="DELETE">
 	<button type="submit">Delete post</button>
     </form>
 <% } %>
