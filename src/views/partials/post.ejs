@@ -2,7 +2,7 @@
 <p><%= post.message %></p>
 
 <% if (user && user.role === "admin") { %>
-    <form method="POST" action="/<%= post.id %>?_method=DELETE"">
+    <form method="POST" action="/<%= post.id %>?_method=DELETE">
 	<button type="submit">Delete post</button>
     </form>
 <% } %>
